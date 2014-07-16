@@ -7,14 +7,11 @@ class UserController extends \BaseController {
     {
         try{
 
-            $response = [
-                'user' => []
-            ];
             $statusCode = 200;
 
             $user = User::find($id);
 
-            $response = [
+            $response['user'] = [
                 'id' => $user->id,
                 'name' => $user->name,
                 'lastname' => $user->lastname,
